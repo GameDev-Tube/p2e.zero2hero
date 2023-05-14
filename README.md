@@ -43,15 +43,15 @@ cp config.json.dist config.json
 Edit config.json:
 It's a json format file, in which all fields must be filled in. Fields:
 
-`rpc_addr` (string) - URL to RPC for Binance Smart Chain or Binance Smart Chain testnet. Can be `https://` or `wss://`. Wss is recommended.
-`psql_dsn` (string) - DSN to PostgreSQL. Example DSN to build from: `host=localhost user=dbuser password=dbpass dbname=dbname port=5432 sslmode=disable`
-`indexer_start_block` (uint64) - Block since when the indexer starts scanning for logs. Insert here a block in which smart contract deployment was confirmed
-`auth_key` (string) - Key to game referee panel. Referee must hold Owner of contract key in MetaMask. Since this is held as plaintext in config, I suggest a long string, [for example from here](https://grc.com/passwords.htm)
-`p2e_contract` (string) - An Ethereum address (`0x[a-fA-F0-9]{40}`) for P2E smart contract
-`bep20_contract` (string) - An Ethereum address for the underlying BEP20 token. In code, you may find reference to it as FAME token, as that's the target underlying token, but it should work on any other BEP20 token.
-`listen` (string) - listen string for local HTTP server. It's `address:port`. To bind on all interfaces, the address should be `0.0.0.0`, to bind on localhost only, it should be `127.0.0.1`. Default is `127.0.0.1:8089`.
-`external_url` (string) - Actual external URL string, i.e., for usage with Apache2 reverse proxy, we need to know this to build URLs. It MUST NOT contain `http[s]://` prefix, trailing slash, etc. Usually it will be for local testing same as `listen`, or FQDN (ServerName) of vhost.
-`is_https` (bool) - does NOT control if the local HTTP server is HTTP or HTTPS, rather it controls building URLs. If you wrap the API with an SSL reverse proxy, set it up to `true`; otherwise, set it to `false`.
+ - `rpc_addr` (string) - URL to RPC for Binance Smart Chain or Binance Smart Chain testnet. Can be `https://` or `wss://`. Wss is recommended.
+ - `psql_dsn` (string) - DSN to PostgreSQL. Example DSN to build from: `host=localhost user=dbuser password=dbpass dbname=dbname port=5432 sslmode=disable`
+ - `indexer_start_block` (uint64) - Block since when the indexer starts scanning for logs. Insert here a block in which smart contract deployment was confirmed
+ - `auth_key` (string) - Key to game referee panel. Referee must hold Owner of contract key in MetaMask. Since this is held as plaintext in config, I suggest a long string, [for example from here](https://grc.com/passwords.htm)
+ - `p2e_contract` (string) - An Ethereum address (`0x[a-fA-F0-9]{40}`) for P2E smart contract
+ - `bep20_contract` (string) - An Ethereum address for the underlying BEP20 token. In code, you may find reference to it as FAME token, as that's the target underlying token, but it should work on any other BEP20 token.
+ - `listen` (string) - listen string for local HTTP server. It's `address:port`. To bind on all interfaces, the address should be `0.0.0.0`, to bind on localhost only, it should be `127.0.0.1`. Default is  - `127.0.0.1:8089`.
+ - `external_url` (string) - Actual external URL string, i.e., for usage with Apache2 reverse proxy, we need to know this to build URLs. It MUST NOT contain `http[s]://` prefix, trailing slash, etc. Usually it will be for local testing same as `listen`, or FQDN (ServerName) of vhost.
+ - `is_https` (bool) - does NOT control if the local HTTP server is HTTP or HTTPS, rather it controls building URLs. If you wrap the API with an SSL reverse proxy, set it up to `true`; otherwise, set it to `false`.
 
 Transfer the config and server binary to the server that will host it, and set up Apache2 with proxy and SSL modules.
 Get your hands on an SSL cert, which can be a Let's Encrypt free SSL. To help you with Apache2 configuration,
