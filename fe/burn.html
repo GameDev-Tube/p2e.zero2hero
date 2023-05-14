@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Burn post-game nfts</title>
+    <link href="game-panel.css" rel="stylesheet" />
+    <script src="config.js" async></script>
+    <script src="common.js" async></script>
+    <script src="burn.js" async></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.3.0/ethers.umd.min.js"
+      integrity="sha512-2T4o6X9D1OQ1ZhA48zBlsDV0rUVZD7ddrHpS/a8k0FDSRCbjV4n1LJUQN3BeIawFyWazgGwcjVn1QU5YkaXuqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container" style="display: none" id="message-banner">
+      <h1 id="message-banner-lbl">
+        Sorry, there is no ongoing prediction phase right now. Check back later!
+      </h1>
+      <h2 id="message-sub-banner-lbl"></h2>
+    </div>
+    <div class="container" id="prediction-container">
+      <h1 class="title">Burn NFT from previous rounds</h1>
+      <div class="button-container button-burn" id="connect-container">
+        <button class="btn" id="connect-btn">Connect</button>
+        <p class="btn-description">Connect to MetaMask</p>
+      </div>
+      <form class="form-container" id="burn-form" style="display: none">
+        <label for="nft-select">Choose nft</label>
+        <select id="nft-select"></select>
+        <button class="btn" id="burn-btn">Burn</button>
+      </form>
+    </div>
+  </body>
+</html>

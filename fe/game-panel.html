@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P2E Referee Panel</title>
+    <link href="game-panel.css" rel="stylesheet" />
+    <script src="config.js" async></script>
+    <script src="common.js" async></script>
+    <script src="game-panel.js" async></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.3.0/ethers.umd.min.js"
+      integrity="sha512-2T4o6X9D1OQ1ZhA48zBlsDV0rUVZD7ddrHpS/a8k0FDSRCbjV4n1LJUQN3BeIawFyWazgGwcjVn1QU5YkaXuqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container" id="login-container">
+      <form class="form-container">
+        <label for="login-key">Admin key</label>
+        <input id="login-key" placeholder="key" type="password" />
+        <button class="btn" id="login-btn">Log in</button>
+      </form>
+    </div>
+    <div class="container" id="phase-form-container" style="display: none">
+      <form class="form-container phase-form-container">
+        <label for="spots-1">First spots amount from leaderboards</label>
+        <input id="spots-1" />
+        <label for="spots-2">Second spots amount from leaderboards</label>
+        <input id="spots-2" />
+        <label for="spots-3">Third spots amount from leaderboards</label>
+        <input id="spots-3" />
+        <button class="btn" id="finish-btn">Finalize match</button>
+      </form>
+    </div>
+    <div class="container" id="panel-container" style="display: none">
+      <header>
+        <h1>Game referee panel</h1>
+        <button class="btn" id="phase-btn">Phase up button</button>
+      </header>
+      <main>
+        <div class="swipers-container">
+          <div class="swiper-holder">
+            <label for="swiperA">A</label>
+            <input
+              type="range"
+              class="range"
+              id="swiperA"
+              step="1"
+              min="0"
+              max="1000"
+            />
+          </div>
+          <div class="swiper-holder">
+            <label for="swiperB">B</label>
+            <input
+              type="range"
+              class="range"
+              id="swiperB"
+              step="1"
+              min="0"
+              max="1000"
+            />
+          </div>
+          <div class="swiper-holder">
+            <label for="swiperC">C</label>
+            <input
+              type="range"
+              class="range"
+              id="swiperC"
+              step="1"
+              min="0"
+              max="1000"
+            />
+          </div>
+          <div class="swiper-holder">
+            <label for="swiperD">D</label>
+            <input
+              type="range"
+              class="range"
+              id="swiperD"
+              step="1"
+              min="0"
+              max="1000"
+            />
+          </div>
+          <div class="swiper-holder">
+            <label for="swiperE">E</label>
+            <input
+              type="range"
+              class="range"
+              id="swiperE"
+              step="1"
+              min="0"
+              max="1000"
+            />
+          </div>
+          <div class="swiper-holder">
+            <label for="swiperF">F</label>
+            <input
+              type="range"
+              class="range"
+              id="swiperF"
+              step="1"
+              min="0"
+              max="1000"
+            />
+          </div>
+        </div>
+        <div class="right-inputs-container">
+          <div class="swiper-holder">
+            <input placeholder="input" id="val-a" />:
+            <input placeholder="input" id="min-a" value="0" />
+            <span class="dash">~</span>
+            <input placeholder="input" id="max-a" value="1000" />
+          </div>
+          <div class="swiper-holder">
+            <input placeholder="input" id="val-b" />:
+            <input placeholder="input" id="min-b" value="0" />
+            <span class="dash">~</span>
+            <input placeholder="input" id="max-b" value="1000" />
+          </div>
+          <div class="swiper-holder">
+            <input placeholder="input" id="val-c" />:
+            <input placeholder="input" id="min-c" value="0" />
+            <span class="dash">~</span>
+            <input placeholder="input" id="max-c" value="1000" />
+          </div>
+          <div class="swiper-holder">
+            <input placeholder="input" id="val-d" />:
+            <input placeholder="input" id="min-d" value="0" />
+            <span class="dash">~</span>
+            <input placeholder="input" id="max-d" value="1000" />
+          </div>
+          <div class="swiper-holder">
+            <input placeholder="input" id="val-e" />:
+            <input placeholder="input" id="min-e" value="0" />
+            <span class="dash">~</span>
+            <input placeholder="input" id="max-e" value="1000" />
+          </div>
+          <div class="swiper-holder">
+            <input placeholder="input" id="val-f" />:
+            <input placeholder="input" id="min-f" value="0" />
+            <span class="dash">~</span>
+            <input placeholder="input" id="max-f" value="1000" />
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

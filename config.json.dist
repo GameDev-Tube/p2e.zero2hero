@@ -1,0 +1,11 @@
+{
+  "rpc_addr": "",
+  "psql_dsn": "",
+  "indexer_start_block": ,
+  "auth_key": "",
+  "p2e_contract": ",",
+  "bep20_contract": "",
+  "listen":"127.0.0.1:8089",
+  "external_url": "127.0.0.1:8089",
+  "is_https": false
+}

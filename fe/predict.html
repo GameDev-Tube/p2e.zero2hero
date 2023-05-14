@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="predict.css" />
+    <script src="config.js" async></script>
+    <script src="predict.js" async></script>
+    <script src="common.js" async></script>
+    <title>Create prediction</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.3.0/ethers.umd.min.js"
+      integrity="sha512-2T4o6X9D1OQ1ZhA48zBlsDV0rUVZD7ddrHpS/a8k0FDSRCbjV4n1LJUQN3BeIawFyWazgGwcjVn1QU5YkaXuqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container" id="message-banner" style="display: none">
+      <h1 id="message-banner-lbl">
+        Sorry, there is no ongoing prediction phase right now. Check back later!
+      </h1>
+      <h2 id="message-sub-banner-lbl"></h2>
+    </div>
+    <div class="container" id="prediction-container">
+      <h1>Create prediction NFT</h1>
+      <div class="button-container" id="connect-container">
+        <button class="btn" id="connect-btn">Connect</button>
+        <p class="btn-description">Connect to MetaMask</p>
+      </div>
+      <form class="form-container" id="form-container" style="display: none">
+        <div class="input-container">
+          <label for="predictionA">label</label>
+          <input id="predictionA" placeholder="input" />
+        </div>
+        <div class="input-container">
+          <label for="predictionB">label</label>
+          <input id="predictionB" placeholder="input" />
+        </div>
+        <div class="input-container">
+          <label for="predictionC">label</label>
+          <input id="predictionC" placeholder="input" />
+        </div>
+        <div class="input-container">
+          <label for="predictionD">label</label>
+          <input id="predictionD" placeholder="input" />
+        </div>
+        <div class="input-container">
+          <label for="predictionE">label</label>
+          <input id="predictionE" placeholder="input" />
+        </div>
+        <div class="input-container">
+          <label for="predictionF">label</label>
+          <input id="predictionF" placeholder="input" />
+        </div>
+        <div class="form-btns-container">
+          <button class="btn" id="predict-btn">Predict</button>
+          <button class="btn" id="rng-btn">Testing: fill with rng</button>
+          <label for="pancake-token-address"
+            >Token on pancake to swap with</label
+          >
+          <select id="pancake-token-address"></select>
+          <button class="btn" id="predict-btn-pancake">
+            Predict with Pancake swap
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

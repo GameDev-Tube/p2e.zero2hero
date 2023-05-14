@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - P2E</title>
+    <link href="index.css" rel="stylesheet" />
+    <script src="config.js" async></script>
+    <script src="index.js" async></script>
+    <script src="common.js" async></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ethers/6.3.0/ethers.umd.min.js"
+      integrity="sha512-2T4o6X9D1OQ1ZhA48zBlsDV0rUVZD7ddrHpS/a8k0FDSRCbjV4n1LJUQN3BeIawFyWazgGwcjVn1QU5YkaXuqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="btn-container">
+        <button class="btn" onclick="openUrl('leaderboard')">
+          Leader board
+        </button>
+        <button class="btn" onclick="openUrl('predict')">Predict</button>
+        <button class="btn" onclick="openUrl('burn')">Burn old NFTs</button>
+      </div>
+      <div class="container" style="display: none" id="error-banner">
+        <h1 id="error-banner-lbl"></h1>
+      </div>
+      <div class="tables-container" id="top-3-board">
+        <div class="table table-2" id="board-2" style="display: none">
+          <p class="top">top 2</p>
+          <div class="prediction-container">
+            <span>prediction a: <span id="top-2-pred-a">0</span></span>
+            <span>prediction b: <span id="top-2-pred-b">0</span></span>
+            <span>prediction c: <span id="top-2-pred-c">0</span></span>
+            <span>prediction d: <span id="top-2-pred-d">0</span></span>
+            <span>prediction e: <span id="top-2-pred-e">0</span></span>
+            <span>prediction f: <span id="top-2-pred-f">0</span></span>
+          </div>
+          <h3 id="top-2-nft">#1234</h3>
+          <p>score:</p>
+          <span class="score" id="score-2"> 12345</span>
+        </div>
+        <div class="table" id="board-1" style="display: none">
+          <p class="top">top 1</p>
+          <div class="prediction-container">
+            <span>prediction a: <span id="top-1-pred-a">0</span></span>
+            <span>prediction b: <span id="top-1-pred-b">0</span></span>
+            <span>prediction c: <span id="top-1-pred-c">0</span></span>
+            <span>prediction d: <span id="top-1-pred-d">0</span></span>
+            <span>prediction e: <span id="top-1-pred-e">0</span></span>
+            <span>prediction f: <span id="top-1-pred-f">0</span></span>
+          </div>
+          <h3 id="top-1-nft">#1234</h3>
+          <p>score:</p>
+          <span class="score" id="score-1"> 12345</span>
+        </div>
+        <div class="table table-3" id="board-3" style="display: none">
+          <p class="top">top 3</p>
+          <div class="prediction-container">
+            <span>prediction a: <span id="top-3-pred-a">0</span></span>
+            <span>prediction b: <span id="top-3-pred-b">0</span></span>
+            <span>prediction c: <span id="top-3-pred-c">0</span></span>
+            <span>prediction d: <span id="top-3-pred-d">0</span></span>
+            <span>prediction e: <span id="top-3-pred-e">0</span></span>
+            <span>prediction f: <span id="top-3-pred-f">0</span></span>
+          </div>
+          <h3 id="top-3-nft">#1234</h3>
+          <p>score:</p>
+          <span class="score" id="score-3"> 12345</span>
+        </div>
+      </div>
+      <div class="container" id="previous-season-banner" style="display: none">
+        <h3 class="leaderboards-desc">(leaderboards from previous game)</h3>
+      </div>
+    </div>
+  </body>
+</html>
